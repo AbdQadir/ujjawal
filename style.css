@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+  
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Prompt', sans-serif;
+    box-sizing: border-box;   
+}
+
+@font-face {
+    font-family: elsie;
+    src: url(./fonts/Elsie-Regular.ttf);
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    min-width: 320px;
+    height: 80px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Aladin', cursive;
+    margin-right: auto;
+    text-decoration: none;
+    color: #000;
+}
+
+#nav-list {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 100%;
+}
+
+#nav-list li {
+    position: relative;
+    height: 50px;
+    width: 80%;
+    max-width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#nav-list a{
+    margin: 0;
+    padding: 0;
+}
+
+.side__nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side__nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.side__nav a:hover {
+  color: #f1f1f1;
+}
+
+.side__nav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+main{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.section{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.intro{
+    height: 100vh;
+    background-image: linear-gradient(to top, #209cff 0%, rgb(104, 224, 207) 100%);
+}
+
+.intro__container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbnail{
+    width: 60%;
+    min-width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.thumbnail img{
+    width: 100%;
+}
+
+.name{
+    margin: 30px auto 0 auto;
+    font-size: 1.7rem;
+}
+
+.qualifcation{
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.indicator{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: 200;
+    transition: all 0.6s ease;
+    animation: upDown 0.5s ease alternate;
+}
+
+@keyframes upDow{
+    from{
+        bottom: 5%;
+    }
+
+    to{
+        bottom: 8%;
+    }
+}
+
+.wave{
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    margin: 0;
+    width: 101%;
+}
+/*intro section ends*/
+
+/*about section starts*/
+
+.about{
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about p{
+    width: 85%;
+    color: #474747;
+}
+
+.hi__text{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #209cff;
+}
+
+.doc__svg{
+    width: 95%;
+    margin-top: 40px;
+}
+
+.doctor__svg{
+    width: 100%;
+}
+
+.quote{
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.medical__quote{
+    width: 90%;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.medical__quote p{
+    color: #209cff;
+    margin-bottom: 8px;
+}
+
+.medical__quote span{
+    font-size: 16px;
+    color: #474747;
+}
+
+.specialisations{
+    position: relative;
+    background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+    padding-top: 90px;
+    padding-bottom: 90px;
+    color: #fff;
+    
+}
+
+.sect__header{
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.specailizaitons__list{
+    width: 100%;
+}
+
+.specialization{
+    text-align: center;
+    width: 85%;
+    margin: 90px auto;
+}
+
+.sp__img{
+    margin: auto;
+    width: 190px;
+    height: 190px;
+}
+
+.sp__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.specialization h2{
+    font-size: 24px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.sp__top, .sp__bottom{
+    position: absolute;
+    left: 0;
+    width: 101%;
+}
+
+.sp__top{
+    top: -3px;
+}
+
+.sp__bottom{
+    bottom: -3px;
+}
+
+.academics{
+    margin-top: 90px;
+}
+
+.academics header{
+    color: #209cff;
+}
+
+.row{
+    width: 82%;
+    margin: auto;
+}
+
+.academic{
+    margin: 60px auto;
+}
+
+.academic__title{
+    font-size: 22px;
+    color:#209cff;
+    margin-bottom: 0;
+}
+
+.institution{
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+
+.experience{
+    position: relative;
+    background: rgb(104, 224, 207);
+    padding-bottom: 80px;
+}
+
+.experience::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    
+}
+
+.experience__row{
+    position: relative;
+    z-index: 1;
+}
+
+.experience__item{
+    padding: 5px;
+}
+
+.experience__title{
+    font-size: 26px;
+    padding: 6px 0px 6px 12px;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+    
+}
+
+.experience__item .institution{
+    margin-top: -2px;
+    margin-bottom: 28px;
+    padding-left: 12px;
+}
+
+.exp__descrip{
+    padding-left: 12px;
+}
+
+.exp__top{
+    margin-top: -8px;
+}
+
+.portrait__bottom{
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    margin: 0;
+    width: 101%; 
+}
+
+.portrait{
+    /* The image used */
+    background-image: url("./images/sitting.jpg");
+
+    /* Set a specific height */
+    height: 600px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portrait__img{
+    width: 100%;
+}
+
+.contacts{
+    position: relative;
+    padding: 50px 24px;
+    box-sizing: border-box;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border: 2px solid rgb(104, 224, 207);
+}
+
+input[type=submit] {
+    background-color: rgb(104, 210, 224);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(104, 210, 224);
+}
+
+footer{
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+}
+
+.social__media{
+    display: flex;
+}
+
+.social__media a{
+    font-size: 16px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 8px;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.social__media a{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.copyright{
+    margin: 20px 0;
+}
